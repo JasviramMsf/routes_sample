@@ -12,22 +12,31 @@ class Screen1 extends StatelessWidget {
         title: const Text('Screen one'),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Go to Screen two'),
-          onPressed: () {
-            Navigator.pushNamed(context, "/second");
-            // print( Navigator.canPop(context));
-            // Navigator.pushReplacement(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => const Screen2(name: "Screen two"),
-            //   ),
-            // );
-            // Navigator.push(
-            //   context,
-            //   // MaterialPageRoute(builder: (context) =>const Screen2(name:"Screen two")),
-            // );
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("This screen will pop out from stack after navigation"),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              child: const Text('Go to Screen two'),
+              onPressed: () {
+                print(Navigator.canPop(context));
+                Navigator.pushReplacementNamed(context, "/second");
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => const Screen2(name: "Screen two"),
+                //   ),
+                // );
+                // Navigator.push(
+                //   context,
+                //   // MaterialPageRoute(builder: (context) =>const Screen2(name:"Screen two")),
+                // );
+              },
+            ),
+          ],
         ),
       ),
     );
@@ -88,11 +97,8 @@ class Screen3 extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  DynamicScreenTest.routeName,
-                  arguments: "Dynamic screen argument"
-                );
+                Navigator.pushNamed(context, DynamicScreenTest.routeName,
+                    arguments: "Dynamic screen argument");
               },
               child: const Text('Go to dynamic screen'),
             ),

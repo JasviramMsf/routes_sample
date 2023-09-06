@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:routes/screens/dynamic_screen.dart';
 import 'package:routes/screens/screens_container.dart';
 
-void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
+class RouteMainApp extends StatelessWidget {
+  const RouteMainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,24 +24,6 @@ class MainApp extends StatelessWidget {
           );
         }
       },
-      // home: DefaultTabController(
-      //   length: 3,
-      //   child: Scaffold(
-      //     appBar: AppBar(
-      //       backgroundColor: Colors.blueGrey,
-      //       bottom: const TabBar(
-      //         tabs: [
-      //           Tab(
-      //             text: "AC",
-      //             icon: Icon(Icons.ac_unit),
-      //           ),
-      //           Tab(icon: Icon(Icons.access_alarm)),
-      //           Tab(icon: Icon(Icons.zoom_out_sharp)),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

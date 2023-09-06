@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dynamic_screen.dart';
 
-//test file for sample use 
+//test file for sample use
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
