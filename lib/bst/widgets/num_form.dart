@@ -43,7 +43,7 @@ class NumberForm extends StatelessWidget {
               // autovalidateMode: AutovalidateMode.always,
               child: TextFormField(
                 controller: _numController,
-                maxLength: 3,
+                maxLength: 4,
                 keyboardType: TextInputType.number,
                 inputFormatters: <TextInputFormatter>[
                   FilteringTextInputFormatter.digitsOnly
