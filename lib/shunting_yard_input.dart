@@ -30,8 +30,7 @@ class ShuntingYardAlgorithm extends StatelessWidget {
 
     void convertToPostfix() {
       try {
-        String formattedExpression =
-            formatMathExpression(inputProvider.inputTxt);
+        String formattedExpression = formatMathExpression(inputProvider.inputTxt);
         String postfix = infixToPostfix(formattedExpression);
         double result = evaluatePostfix(postfix);
         inputProvider.setInputtxt(result.toString());

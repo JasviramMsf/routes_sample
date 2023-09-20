@@ -7,8 +7,6 @@ String infixToPostfix(String infix) {
   final queue = Queue<int>();
 
   for (var token in infix.split(RegExp(r'\s+'))) {
-    // print("regex check $token");
-    // print(infix.split(RegExp(r'\s+')));
 
     if (token.isNotEmpty) {
       final tokenIndex = token[0];
@@ -61,12 +59,8 @@ double evaluatePostfix(String postfix) {
     if (isNumeric(token)) {
       stack.add(double.parse(token));
     } else {
-      print(stack);
       final b = stack.removeLast();
       final a = stack.removeLast();
-      print(a);
-      print(b);
-      print(token);
       switch (token) {
         case '+':
           stack.add(a + b);
